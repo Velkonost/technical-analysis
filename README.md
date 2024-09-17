@@ -70,7 +70,7 @@ ID | Name
 
 # How to use
 ```kotlin
-implementation("io.github.velkonost:technical-analysis:0.0.1")
+implementation("io.github.velkonost:technical-analysis:0.0.2")
 ```
 
 #### Example
