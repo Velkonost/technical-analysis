@@ -1,0 +1,26 @@
+[versions]
+technical-analysis = "0.0.1"
+kotlin = "2.0.0"
+
+multik = "0.2.3"
+dataframe = "0.13.1"
+jreleaser = "1.14.0"
+
+jupiter = "5.8.1"
+
+[libraries]
+
+# gradle
+gradle-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+# data
+multik-core = { module = "org.jetbrains.kotlinx:multik-core", version.ref = "multik" }
+multik-default = { module = "org.jetbrains.kotlinx:multik-default", version.ref = "multik" }
+dataframe = { module = "org.jetbrains.kotlinx:dataframe", version.ref = "dataframe" }
+
+# tests
+jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jupiter"}
+jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "jupiter"}
+
+[plugins]
+jreleaser = { id = "org.jreleaser", version.ref = "jreleaser" }
