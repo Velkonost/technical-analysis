@@ -55,16 +55,20 @@ import velkonost.technical.analysis.indicator.volatility.donchianChannel.*
 import velkonost.technical.analysis.indicator.volatility.keltnerChannel.*
 import velkonost.technical.analysis.indicator.volume.*
 import java.io.File
+import java.io.FileNotFoundException
 import java.math.BigDecimal
+import java.nio.file.Paths
 
 object ExampleRunner {
 
     fun start(
-        resultFilePath: String = "./technical-analysis/src/main/kotlin/velkonost/technical/analysis/example/results.csv",
+        resultFilePath: String = "results.csv",
     ) {
-        val csvFile = File(resultFilePath)
+        val inputStream = this::class.java.getResourceAsStream(resultFilePath)
+            ?: throw FileNotFoundException("Ресурс '$resultFilePath' не найден.")
+
         val dataframe = DataFrame.readCSV(
-            file = csvFile,
+            stream = inputStream,
             colTypes = CsvColumn.entries.associate { it.name to it.type }
                     + IndicatorName.entries.associate { it.title to ColType.BigDecimal }
         )

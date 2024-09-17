@@ -13,7 +13,7 @@ import java.math.BigDecimal
 
 object TestTechnicalAnalysis {
 
-    internal const val RESULT_FILE_PATH: String =
+    private const val RESULT_FILE_PATH: String =
         "src/main/kotlin/velkonost/technical/analysis/example/results.csv"
 
     internal val dataframe: DataFrame<*>
