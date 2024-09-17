@@ -17,15 +17,6 @@ java {
     withSourcesJar()
 }
 
-sourceSets {
-    main {
-        resources {
-            srcDirs("src/main/kotlin")
-            include("**/*.csv")
-        }
-    }
-}
-
 group = "io.github.velkonost"
 version = libs.versions.technical.analysis.get()
 description = "Technical analysis popular indicators"

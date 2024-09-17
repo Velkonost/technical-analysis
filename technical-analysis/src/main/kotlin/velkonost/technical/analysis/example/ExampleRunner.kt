@@ -62,7 +62,7 @@ import java.nio.file.Paths
 object ExampleRunner {
 
     fun start(
-        resultFilePath: String = "results.csv",
+        resultFilePath: String = "/results.csv",
     ) {
         val inputStream = this::class.java.getResourceAsStream(resultFilePath)
             ?: throw FileNotFoundException("Ресурс '$resultFilePath' не найден.")

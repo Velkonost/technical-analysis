@@ -6,6 +6,7 @@ import velkonost.technical.analysis.example.ExampleRunner
 import velkonost.technical.analysis.indicator.TestTechnicalAnalysis
 
 class AwesomeOscillatorIndicatorTest {
+
     @Test
     fun test() {
         with(TestTechnicalAnalysis) {
