@@ -488,7 +488,7 @@ class GoldenCrossTest {
             BigDecimal("56"),
             BigDecimal("57"),
             BigDecimal("58"),
-            BigDecimal("59")   
+            BigDecimal("59")
         )
 
 
