@@ -61,4 +61,3 @@ class CandleWick(
         return StrategyDecision.Nothing
     }
 }
-}
