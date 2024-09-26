@@ -8,5 +8,7 @@ enum class StrategyName(val title: String) {
     GoldenCross("goldenCross"),
     StochRsiMacd("StochRSIMACD"),
     RsiStochEma("rsi_stoch_ema"),
-    StochasticBb("stochBB")
+    StochasticBb("stochBB"),
+    TripleEma("tripleEMA"),
+    TripleEmaStochRsiAtr("tripleEMAStochasticRSIATR")
 }
