@@ -7,5 +7,6 @@ enum class StrategyName(val title: String) {
     CandleWick("candle_wick"),
     GoldenCross("goldenCross"),
     StochRsiMacd("StochRSIMACD"),
-    RsiStochEma("rsi_stoch_ema")
+    RsiStochEma("rsi_stoch_ema"),
+    StochasticBb("stochBB")
 }
