@@ -6,5 +6,6 @@ enum class StrategyName(val title: String) {
     EmaCrossover("EmaCrossover"),
     CandleWick("candle_wick"),
     GoldenCross("goldenCross"),
-    StochRsiMacd("StochRSIMACD")
+    StochRsiMacd("StochRSIMACD"),
+    RsiStochEma("rsi_stoch_ema")
 }
