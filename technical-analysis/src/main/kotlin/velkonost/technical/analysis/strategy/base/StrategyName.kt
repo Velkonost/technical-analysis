@@ -12,5 +12,6 @@ enum class StrategyName(val title: String) {
     TripleEma("tripleEMA"),
     TripleEmaStochRsiAtr("tripleEMAStochasticRSIATR"),
     HeikinAshiEma("heikin_ashi_ema"),
-    HeikinAshiEma2("heikin_ashi_ema2")
+    HeikinAshiEma2("heikin_ashi_ema2"),
+    FibMacd("fibMACD")
 }

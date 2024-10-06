@@ -138,7 +138,7 @@ class RsiStochEma(
                 }
             }
             SignalType.None -> {
-                return StrategyDecision.Short
+                return StrategyDecision.Nothing
             }
         }
 
