@@ -1,5 +1,5 @@
 [versions]
-technical-analysis = "0.0.2"
+technical-analysis = "0.1.2"
 kotlin = "2.0.0"
 
 multik = "0.2.3"
