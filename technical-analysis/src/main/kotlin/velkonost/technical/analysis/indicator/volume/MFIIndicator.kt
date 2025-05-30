@@ -6,6 +6,30 @@ import velkonost.technical.analysis.indicator.base.IndicatorName
 import java.math.BigDecimal
 import java.math.RoundingMode
 
+/**
+ * Money Flow Index (MFI) indicator implementation.
+ * The MFI is a volume-weighted oscillator that measures the inflow and outflow of money into a security over a given period.
+ * It is used to identify overbought or oversold conditions and potential reversals.
+ *
+ * The MFI is calculated as follows:
+ * 1. Compute the typical price (TP) for each period: (High + Low + Close) / 3.
+ * 2. Determine the up or down flow (using TP) and multiply by the volume (money flow).
+ * 3. Sum the positive (up) money flow and negative (down) money flow over the window.
+ * 4. Compute the Money Ratio (MR) as (positive sum / negative sum).
+ * 5. MFI = 100 – (100 / (1 + MR)).
+ *
+ * Trading signals:
+ * - MFI above 80 (overbought) may indicate a potential reversal (sell signal).
+ * - MFI below 20 (oversold) may indicate a potential reversal (buy signal).
+ * - Divergences between MFI and price can signal a reversal.
+ *
+ * @property high Column of high prices
+ * @property low Column of low prices
+ * @property close Column of closing prices
+ * @property volume Column of volume values
+ * @property window Period for the rolling calculation (default: 14)
+ * @property fillna Whether to fill NaN values (default: false)
+ */
 class MFIIndicator(
     private val high: DataColumn<BigDecimal>,
     private val low: DataColumn<BigDecimal>,
@@ -17,6 +41,16 @@ class MFIIndicator(
 
     override val skipTestResults = true
 
+    /**
+     * Calculates the Money Flow Index (MFI) values.
+     * The calculation involves:
+     * 1. Computing the typical price (TP) for each period.
+     * 2. Determining the up or down flow (using TP) and multiplying by volume (money flow).
+     * 3. Summing the positive and negative money flows over the window.
+     * 4. Computing the Money Ratio (MR) and then the MFI.
+     *
+     * @return DataColumn<BigDecimal> containing the MFI values.
+     */
     override fun calculate(): DataColumn<BigDecimal> {
         val size = volume.size()
         val typicalPrice = Array(size) { index ->

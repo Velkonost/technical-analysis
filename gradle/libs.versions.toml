@@ -1,12 +1,13 @@
 [versions]
-technical-analysis = "0.1.2"
+technical-analysis = "1.0.0"
 kotlin = "2.0.0"
 
 multik = "0.2.3"
 dataframe = "0.13.1"
-jreleaser = "1.14.0"
 
 jupiter = "5.8.1"
+kmm-publish = "0.32.0"
+dokka = "2.0.0"
 
 [libraries]
 
@@ -23,4 +24,5 @@ jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "j
 jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "jupiter"}
 
 [plugins]
-jreleaser = { id = "org.jreleaser", version.ref = "jreleaser" }
+kmm-publish = { id = "com.vanniktech.maven.publish", version.ref = "kmm-publish"}
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka"}

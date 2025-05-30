@@ -59,6 +59,30 @@ import java.io.FileNotFoundException
 import java.math.BigDecimal
 import java.nio.file.Paths
 
+/**
+ * ExampleRunner is a utility object that demonstrates and tests the functionality of all technical indicators
+ * in the library. It provides methods to:
+ * 1. Load market data from CSV files
+ * 2. Calculate various technical indicators
+ * 3. Test indicator calculations against expected results
+ * 4. Group indicators by category (volume, volatility, trend, momentum)
+ *
+ * The runner supports testing of indicators across different categories:
+ * - Volume indicators (e.g., ADI, OBV, CMF)
+ * - Volatility indicators (e.g., Bollinger Bands, Keltner Channels)
+ * - Trend indicators (e.g., MACD, SMA, EMA)
+ * - Momentum indicators (e.g., RSI, Stochastic)
+ * - Other indicators (e.g., Daily Returns)
+ *
+ * Usage:
+ * 1. Prepare market data in CSV format with required columns
+ * 2. Use the run() method to execute all indicator calculations
+ * 3. Check the results against expected values
+ * 4. Analyze indicator performance and accuracy
+ *
+ * Note: This class is primarily used for testing and demonstration purposes.
+ * For production use, individual indicators should be instantiated directly.
+ */
 object ExampleRunner {
 
     fun start(
@@ -157,6 +181,15 @@ object ExampleRunner {
         ).also { add(it) }
     }
 
+    /**
+     * Tests volatility-based indicators using the provided market data.
+     * Volatility indicators measure price volatility and market conditions.
+     *
+     * @param highColumn Column of high prices
+     * @param closeColumn Column of closing prices
+     * @param lowColumn Column of low prices
+     * @param volumeColumn Column of volume values
+     */
     private fun MutableList<Indicator>.testVolatility(
         highColumn: DataColumn<BigDecimal>,
         closeColumn: DataColumn<BigDecimal>,
@@ -188,6 +221,14 @@ object ExampleRunner {
         UlcerIndex(closeColumn).also { add(it) }
     }
 
+    /**
+     * Tests trend-based indicators using the provided market data.
+     * Trend indicators identify and measure market trends.
+     *
+     * @param highColumn Column of high prices
+     * @param closeColumn Column of closing prices
+     * @param lowColumn Column of low prices
+     */
     private fun MutableList<Indicator>.testTrend(
         highColumn: DataColumn<BigDecimal>,
         closeColumn: DataColumn<BigDecimal>,
@@ -226,6 +267,15 @@ object ExampleRunner {
         AroonIndicator(highColumn, lowColumn).also { add(it) }
     }
 
+    /**
+     * Tests momentum-based indicators using the provided market data.
+     * Momentum indicators measure the speed and strength of price movements.
+     *
+     * @param highColumn Column of high prices
+     * @param closeColumn Column of closing prices
+     * @param lowColumn Column of low prices
+     * @param volumeColumn Column of volume values
+     */
     private fun MutableList<Indicator>.testMomentum(
         highColumn: DataColumn<BigDecimal>,
         closeColumn: DataColumn<BigDecimal>,
@@ -251,6 +301,15 @@ object ExampleRunner {
         PvoHist(volumeColumn).also { add(it) }
     }
 
+    /**
+     * Tests other miscellaneous indicators using the provided market data.
+     * These include indicators for returns and other calculations.
+     *
+     * @param highColumn Column of high prices
+     * @param closeColumn Column of closing prices
+     * @param lowColumn Column of low prices
+     * @param volumeColumn Column of volume values
+     */
     private fun MutableList<Indicator>.testOther(
         highColumn: DataColumn<BigDecimal>,
         closeColumn: DataColumn<BigDecimal>,

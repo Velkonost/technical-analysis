@@ -8,6 +8,54 @@ import java.math.BigDecimal
 import java.math.MathContext
 import java.math.RoundingMode
 
+/**
+ * Smoothed Ease of Movement (SMA EMV) indicator implementation.
+ * This indicator is a smoothed version of the Ease of Movement (EMV) indicator, using a Simple Moving Average
+ * to reduce noise and provide clearer signals. It measures the relationship between price and volume to
+ * determine how easily a price can move, with the added benefit of smoothing for better trend identification.
+ *
+ * Calculation:
+ * 1. Calculate raw Ease of Movement (EMV):
+ *    * Distance Moved = ((High + Low) / 2) - ((Previous High + Previous Low) / 2)
+ *    * Box Ratio = (Volume / 100,000,000) / (High - Low)
+ *    * EMV = Distance Moved / Box Ratio
+ * 2. Apply Simple Moving Average (SMA) to the EMV values:
+ *    * SMA EMV = SMA(EMV, window)
+ *
+ * The indicator shows:
+ * - Positive values when price moves up with low volume resistance
+ * - Negative values when price moves down with low volume resistance
+ * - Values near zero when price moves with high volume
+ * - Smoother signals compared to raw EMV
+ *
+ * Trading Applications:
+ * - Trend Analysis:
+ *   * Rising SMA EMV indicates strong uptrend with low volume resistance
+ *   * Falling SMA EMV indicates strong downtrend with low volume resistance
+ *   * SMA EMV near zero suggests price movement requires high volume
+ *   * Smoother signals help identify longer-term trends
+ *
+ * - Volume Analysis:
+ *   * High SMA EMV values suggest price can move easily
+ *   * Low SMA EMV values suggest price movement requires significant volume
+ *   * Smoothed signals reduce false volume spikes
+ *
+ * - Divergence Analysis:
+ *   * Bullish divergence: Price makes lower lows while SMA EMV makes higher lows
+ *   * Bearish divergence: Price makes higher highs while SMA EMV makes lower highs
+ *   * Smoothed signals provide more reliable divergence signals
+ *
+ * - Breakout Confirmation:
+ *   * High SMA EMV values confirm breakout validity
+ *   * Low SMA EMV values suggest false breakout
+ *   * Smoothed signals reduce false breakout signals
+ *
+ * @property high Column of high prices
+ * @property low Column of low prices
+ * @property volume Column of volume values
+ * @property window Period for SMA smoothing (default: 14)
+ * @property fillna Whether to fill NaN values with zeros (default: false)
+ */
 class SmaEaseOfMovementIndicator(
     private val high: DataColumn<BigDecimal>,
     private val low: DataColumn<BigDecimal>,
@@ -16,6 +64,24 @@ class SmaEaseOfMovementIndicator(
     private val fillna: Boolean = false
 ) : Indicator(IndicatorName.SmaEm) {
 
+    /**
+     * Calculates the SMA-smoothed Ease of Movement (SMA EMV) values.
+     * The calculation involves:
+     * 1. Computing raw EMV values:
+     *    * Price differences (high and low)
+     *    * Price ranges
+     *    * Volume-adjusted movement
+     * 2. Applying Simple Moving Average smoothing
+     * 3. Handling edge cases and zero values
+     *
+     * The result is a smoothed oscillator that:
+     * - Shows how easily price can move
+     * - Provides clearer trend signals
+     * - Reduces noise in the original EMV
+     * - Helps identify longer-term trends
+     *
+     * @return DataColumn<BigDecimal> containing the SMA-smoothed EMV values
+     */
     override fun calculate(): DataColumn<BigDecimal> {
         val emv: List<BigDecimal>
 
