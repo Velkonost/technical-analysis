@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>velkonost.technical.analysis.indicator.volume</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    technical-analysis
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.0.0        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":technical-analysis:dokkaHtml/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":technical-analysis:dokkaHtml/main"
+                                       data-filter=":technical-analysis:dokkaHtml/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    technical-analysis
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="technical-analysis::velkonost.technical.analysis.indicator.volume////PointingToDeclaration//1620374451">
+  <div class="breadcrumbs"><a href="../../index.html">technical-analysis</a><span class="delimiter">/</span><span class="current">velkonost.technical.analysis.indicator.volume</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-1494070323%2FClasslikes%2F1620374451" anchor-label="AccDistIndexIndicator" id="-1494070323%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-acc-dist-index-indicator/index.html"><span>Acc</span><wbr></wbr><span>Dist</span><wbr></wbr><span>Index</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1494070323%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-acc-dist-index-indicator/index.html">AccDistIndexIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">high<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">low<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Accumulation/Distribution Index (ADI) indicator implementation. The ADI is a volume-based indicator that measures the cumulative flow of money into and out of a security. It helps identify divergences between price and volume, which can signal potential trend reversals.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1572786541%2FClasslikes%2F1620374451" anchor-label="ChaikinMoneyFlowIndicator" id="1572786541%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-chaikin-money-flow-indicator/index.html"><span>Chaikin</span><wbr></wbr><span>Money</span><wbr></wbr><span>Flow</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1572786541%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-chaikin-money-flow-indicator/index.html">ChaikinMoneyFlowIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">high<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">low<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">window<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">20</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Chaikin Money Flow (CMF) indicator implementation. CMF is a volume-weighted momentum indicator that measures the money flow volume over a specific period. It helps identify buying and selling pressure by analyzing the relationship between price and volume.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="378452086%2FClasslikes%2F1620374451" anchor-label="EaseOfMovementIndicator" id="378452086%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ease-of-movement-indicator/index.html"><span>Ease</span><wbr></wbr><span>Of</span><wbr></wbr><span>Movement</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="378452086%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-ease-of-movement-indicator/index.html">EaseOfMovementIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">high<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">low<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">window<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">14</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Ease of Movement (EMV) indicator implementation. The Ease of Movement is a volume-based momentum indicator that measures the relationship between price and volume to determine how easily a price can move. It helps identify potential trend reversals and the strength of price movements.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1371134505%2FClasslikes%2F1620374451" anchor-label="ForceIndexIndicator" id="1371134505%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-force-index-indicator/index.html"><span>Force</span><wbr></wbr><span>Index</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1371134505%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-force-index-indicator/index.html">ForceIndexIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">window<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">13</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Force Index (FI) indicator implementation. The Force Index is a momentum indicator that combines price movement and volume to measure the strength of bulls and bears in the market. It helps identify potential trend reversals and confirm price movements.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-263686926%2FClasslikes%2F1620374451" anchor-label="MFIIndicator" id="-263686926%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-m-f-i-indicator/index.html"><span><span>MFIIndicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263686926%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-m-f-i-indicator/index.html">MFIIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">high<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">low<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">window<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">14</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Money Flow Index (MFI) indicator implementation. The MFI is a volume-weighted oscillator that measures the inflow and outflow of money into a security over a given period. It is used to identify overbought or oversold conditions and potential reversals.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1927626917%2FClasslikes%2F1620374451" anchor-label="NegativeVolumeIndexIndicator" id="1927626917%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-negative-volume-index-indicator/index.html"><span>Negative</span><wbr></wbr><span>Volume</span><wbr></wbr><span>Index</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1927626917%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-negative-volume-index-indicator/index.html">NegativeVolumeIndexIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Negative Volume Index (NVI) indicator implementation. The NVI is a cumulative indicator that focuses on days when volume decreases from the previous day. It helps identify smart money movements by tracking price changes on low volume days, as institutional investors often trade on days with lower volume.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1856303801%2FClasslikes%2F1620374451" anchor-label="OnBalanceVolumeIndicator" id="1856303801%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-on-balance-volume-indicator/index.html"><span>On</span><wbr></wbr><span>Balance</span><wbr></wbr><span>Volume</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1856303801%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-on-balance-volume-indicator/index.html">OnBalanceVolumeIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">On-Balance Volume (OBV) indicator implementation. OBV is a momentum indicator that uses volume flow to predict changes in price. It is based on the principle that volume precedes price movement, making it a leading indicator.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1569655709%2FClasslikes%2F1620374451" anchor-label="SmaEaseOfMovementIndicator" id="1569655709%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sma-ease-of-movement-indicator/index.html"><span>Sma</span><wbr></wbr><span>Ease</span><wbr></wbr><span>Of</span><wbr></wbr><span>Movement</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1569655709%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-sma-ease-of-movement-indicator/index.html">SmaEaseOfMovementIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">high<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">low<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">window<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">14</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Smoothed Ease of Movement (SMA EMV) indicator implementation. This indicator is a smoothed version of the Ease of Movement (EMV) indicator, using a Simple Moving Average to reduce noise and provide clearer signals. It measures the relationship between price and volume to determine how easily a price can move, with the added benefit of smoothing for better trend identification.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1888923728%2FClasslikes%2F1620374451" anchor-label="VolumePriceTrendIndicator" id="1888923728%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-volume-price-trend-indicator/index.html"><span>Volume</span><wbr></wbr><span>Price</span><wbr></wbr><span>Trend</span><wbr></wbr><span><span>Indicator</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1888923728%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-volume-price-trend-indicator/index.html">VolumePriceTrendIndicator</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">smoothingFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter ">dropNans<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Volume Price Trend (VPT) indicator implementation. VPT is a volume-based indicator that combines price and volume to measure the cumulative flow of money into and out of a security. It helps identify:</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="370254484%2FClasslikes%2F1620374451" anchor-label="VolumeWeightedAveragePrice" id="370254484%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-volume-weighted-average-price/index.html"><span>Volume</span><wbr></wbr><span>Weighted</span><wbr></wbr><span>Average</span><wbr></wbr><span><span>Price</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="370254484%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-volume-weighted-average-price/index.html">VolumeWeightedAveragePrice</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">high<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">low<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">close<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">volume<span class="token operator">: </span><span data-unresolved-link="org.jetbrains.kotlinx.dataframe/DataColumn///PointingToDeclaration/">DataColumn</span><span class="token operator">&lt;</span><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigDecimal.html">BigDecimal</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">window<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">14</span><span class="token punctuation">, </span></span><span class="parameter ">fillna<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../velkonost.technical.analysis.indicator.base/-indicator/index.html">Indicator</a></div><div class="brief "><p class="paragraph">Volume Weighted Average Price (VWAP) indicator implementation. VWAP is a trading benchmark that gives the average price a security has traded at throughout the day, based on both volume and price. It is commonly used by traders to assess the current price relative to the day's average.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

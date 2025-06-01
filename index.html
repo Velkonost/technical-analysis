@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>technical-analysis</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="index.html">
+                    technical-analysis
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.0.0        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":technical-analysis:dokkaHtml/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":technical-analysis:dokkaHtml/main"
+                                       data-filter=":technical-analysis:dokkaHtml/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    technical-analysis
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageIds="technical-analysis::////PointingToDeclaration//1620374451">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>technical-analysis</span></span></h1>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-1480905130%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.example" id="-1480905130%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.example/index.html">velkonost.technical.analysis.example</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1480905130%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="945649960%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.example.items" id="945649960%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.example.items/index.html">velkonost.technical.analysis.example.items</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="945649960%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="369484904%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.base" id="369484904%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.base/index.html">velkonost.technical.analysis.indicator.base</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="369484904%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1715646703%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.momentum" id="1715646703%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.momentum/index.html">velkonost.technical.analysis.indicator.momentum</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1715646703%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="398601904%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.momentum.ppo" id="398601904%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.momentum.ppo/index.html">velkonost.technical.analysis.indicator.momentum.ppo</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="398601904%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1129817366%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.momentum.pvo" id="-1129817366%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.momentum.pvo/index.html">velkonost.technical.analysis.indicator.momentum.pvo</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1129817366%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-857365868%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.momentum.stoch" id="-857365868%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.momentum.stoch/index.html">velkonost.technical.analysis.indicator.momentum.stoch</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-857365868%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1790822968%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.momentum.stochrsi" id="1790822968%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.momentum.stochrsi/index.html">velkonost.technical.analysis.indicator.momentum.stochrsi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1790822968%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="2123516573%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.other" id="2123516573%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.other/index.html">velkonost.technical.analysis.indicator.other</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2123516573%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1094744342%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend" id="-1094744342%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend/index.html">velkonost.technical.analysis.indicator.trend</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1094744342%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1835409785%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend.aroon" id="1835409785%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend.aroon/index.html">velkonost.technical.analysis.indicator.trend.aroon</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1835409785%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-565396235%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend.ema" id="-565396235%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend.ema/index.html">velkonost.technical.analysis.indicator.trend.ema</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-565396235%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="858293871%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend.ichimoku" id="858293871%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend.ichimoku/index.html">velkonost.technical.analysis.indicator.trend.ichimoku</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="858293871%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1139375480%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend.kst" id="-1139375480%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend.kst/index.html">velkonost.technical.analysis.indicator.trend.kst</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1139375480%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1036793917%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend.macd" id="1036793917%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend.macd/index.html">velkonost.technical.analysis.indicator.trend.macd</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1036793917%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="548092931%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend.sma" id="548092931%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend.sma/index.html">velkonost.technical.analysis.indicator.trend.sma</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="548092931%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1533221174%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.trend.vortex" id="1533221174%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.trend.vortex/index.html">velkonost.technical.analysis.indicator.trend.vortex</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1533221174%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1985039108%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.volatility" id="-1985039108%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.volatility/index.html">velkonost.technical.analysis.indicator.volatility</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1985039108%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-438288110%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.volatility.bollingerBands" id="-438288110%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.volatility.bollingerBands/index.html">velkonost.technical.analysis.indicator.volatility.bollingerBands</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-438288110%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="765968643%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.volatility.donchianChannel" id="765968643%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.volatility.donchianChannel/index.html">velkonost.technical.analysis.indicator.volatility.donchianChannel</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="765968643%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-383612928%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.volatility.keltnerChannel" id="-383612928%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.volatility.keltnerChannel/index.html">velkonost.technical.analysis.indicator.volatility.keltnerChannel</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-383612928%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="480404017%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.indicator.volume" id="480404017%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.indicator.volume/index.html">velkonost.technical.analysis.indicator.volume</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="480404017%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1839743157%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.strategy" id="-1839743157%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.strategy/index.html">velkonost.technical.analysis.strategy</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1839743157%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1561541464%2FPackages%2F1620374451" anchor-label="velkonost.technical.analysis.strategy.base" id="1561541464%2FPackages%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+    <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="technical-analysis/velkonost.technical.analysis.strategy.base/index.html">velkonost.technical.analysis.strategy.base</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1561541464%2FPackages%2F1620374451"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

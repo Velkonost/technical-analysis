@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>IndicatorName</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../../index.html">
+                    technical-analysis
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+1.0.0        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":technical-analysis:dokkaHtml/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":technical-analysis:dokkaHtml/main"
+                                       data-filter=":technical-analysis:dokkaHtml/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    technical-analysis
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="technical-analysis::velkonost.technical.analysis.indicator.base/IndicatorName///PointingToDeclaration//1620374451">
+  <div class="breadcrumbs"><a href="../../../index.html">technical-analysis</a><span class="delimiter">/</span><a href="../index.html">velkonost.technical.analysis.indicator.base</a><span class="delimiter">/</span><span class="current">IndicatorName</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Indicator</span><wbr></wbr><span><span>Name</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">IndicatorName</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="index.html">IndicatorName</a><span class="token operator">&gt; </span></div><p class="paragraph">Enum class representing all available technical indicators in the library. Indicators are categorized into several groups:</p><ul><li><p class="paragraph">Volume indicators: Measure trading volume and its relationship with price</p></li><li><p class="paragraph">Volatility indicators: Measure price volatility and market conditions</p></li><li><p class="paragraph">Trend indicators: Identify and measure market trends</p></li><li><p class="paragraph">Momentum indicators: Measure the speed and strength of price movements</p></li><li><p class="paragraph">Other indicators: Miscellaneous technical analysis tools</p></li></ul><p class="paragraph">Each indicator has a unique title used for identification in the output data.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="">Entries</h2>
+        <div class="table"><a data-name="-461892419%2FClasslikes%2F1620374451" anchor-label="Adi" id="-461892419%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-adi/index.html">Adi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-461892419%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-adi/index.html">Adi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1399647322%2FClasslikes%2F1620374451" anchor-label="Obv" id="1399647322%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-obv/index.html">Obv</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1399647322%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-obv/index.html">Obv</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1242174765%2FClasslikes%2F1620374451" anchor-label="Cmf" id="-1242174765%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cmf/index.html">Cmf</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1242174765%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-cmf/index.html">Cmf</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2083800652%2FClasslikes%2F1620374451" anchor-label="Fi" id="-2083800652%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-fi/index.html">Fi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2083800652%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-fi/index.html">Fi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1634541273%2FClasslikes%2F1620374451" anchor-label="Em" id="1634541273%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-em/index.html">Em</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1634541273%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-em/index.html">Em</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="632536550%2FClasslikes%2F1620374451" anchor-label="SmaEm" id="632536550%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sma-em/index.html">SmaEm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="632536550%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-sma-em/index.html">SmaEm</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1282463215%2FClasslikes%2F1620374451" anchor-label="Vpt" id="-1282463215%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vpt/index.html">Vpt</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1282463215%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-vpt/index.html">Vpt</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1936535457%2FClasslikes%2F1620374451" anchor-label="Vwap" id="1936535457%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vwap/index.html">Vwap</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1936535457%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-vwap/index.html">Vwap</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1854958727%2FClasslikes%2F1620374451" anchor-label="Mfi" id="1854958727%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mfi/index.html">Mfi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1854958727%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-mfi/index.html">Mfi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="997726840%2FClasslikes%2F1620374451" anchor-label="Nvi" id="997726840%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-nvi/index.html">Nvi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="997726840%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-nvi/index.html">Nvi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1220157948%2FClasslikes%2F1620374451" anchor-label="Bbm" id="-1220157948%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bbm/index.html">Bbm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1220157948%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-bbm/index.html">Bbm</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2013589695%2FClasslikes%2F1620374451" anchor-label="Bbh" id="2013589695%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bbh/index.html">Bbh</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2013589695%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-bbh/index.html">Bbh</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1144578499%2FClasslikes%2F1620374451" anchor-label="Bbl" id="1144578499%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bbl/index.html">Bbl</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1144578499%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-bbl/index.html">Bbl</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="902281358%2FClasslikes%2F1620374451" anchor-label="Bbw" id="902281358%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bbw/index.html">Bbw</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="902281358%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-bbw/index.html">Bbw</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="275567303%2FClasslikes%2F1620374451" anchor-label="Bbp" id="275567303%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bbp/index.html">Bbp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="275567303%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-bbp/index.html">Bbp</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1828902286%2FClasslikes%2F1620374451" anchor-label="Bbhi" id="-1828902286%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bbhi/index.html">Bbhi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1828902286%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-bbhi/index.html">Bbhi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1296521710%2FClasslikes%2F1620374451" anchor-label="Bbli" id="1296521710%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bbli/index.html">Bbli</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1296521710%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-bbli/index.html">Bbli</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="688717666%2FClasslikes%2F1620374451" anchor-label="Kcc" id="688717666%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kcc/index.html">Kcc</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="688717666%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kcc/index.html">Kcc</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1749937319%2FClasslikes%2F1620374451" anchor-label="Kch" id="1749937319%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kch/index.html">Kch</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1749937319%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kch/index.html">Kch</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="880926123%2FClasslikes%2F1620374451" anchor-label="Kcl" id="880926123%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kcl/index.html">Kcl</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="880926123%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kcl/index.html">Kcl</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="638628982%2FClasslikes%2F1620374451" anchor-label="Kcw" id="638628982%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kcw/index.html">Kcw</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="638628982%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kcw/index.html">Kcw</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="11914927%2FClasslikes%2F1620374451" anchor-label="Kcp" id="11914927%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kcp/index.html">Kcp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="11914927%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kcp/index.html">Kcp</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1412191350%2FClasslikes%2F1620374451" anchor-label="Kchi" id="-1412191350%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kchi/index.html">Kchi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1412191350%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kchi/index.html">Kchi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1713232646%2FClasslikes%2F1620374451" anchor-label="Kcli" id="1713232646%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kcli/index.html">Kcli</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1713232646%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kcli/index.html">Kcli</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-95859292%2FClasslikes%2F1620374451" anchor-label="Dcl" id="-95859292%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dcl/index.html">Dcl</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-95859292%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dcl/index.html">Dcl</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="773151904%2FClasslikes%2F1620374451" anchor-label="Dch" id="773151904%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dch/index.html">Dch</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="773151904%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dch/index.html">Dch</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1834371557%2FClasslikes%2F1620374451" anchor-label="Dcm" id="1834371557%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dcm/index.html">Dcm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1834371557%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dcm/index.html">Dcm</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-338156433%2FClasslikes%2F1620374451" anchor-label="Dcw" id="-338156433%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dcw/index.html">Dcw</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-338156433%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dcw/index.html">Dcw</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-964870488%2FClasslikes%2F1620374451" anchor-label="Dcp" id="-964870488%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dcp/index.html">Dcp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-964870488%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dcp/index.html">Dcp</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-652889866%2FClasslikes%2F1620374451" anchor-label="Atr" id="-652889866%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-atr/index.html">Atr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-652889866%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-atr/index.html">Atr</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2120346565%2FClasslikes%2F1620374451" anchor-label="Ui" id="2120346565%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ui/index.html">Ui</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2120346565%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ui/index.html">Ui</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="611730214%2FClasslikes%2F1620374451" anchor-label="Macd" id="611730214%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-macd/index.html">Macd</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="611730214%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-macd/index.html">Macd</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1608759918%2FClasslikes%2F1620374451" anchor-label="MacdSignal" id="1608759918%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-macd-signal/index.html">MacdSignal</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1608759918%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-macd-signal/index.html">MacdSignal</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1729683573%2FClasslikes%2F1620374451" anchor-label="MacdDiff" id="-1729683573%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-macd-diff/index.html">MacdDiff</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1729683573%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-macd-diff/index.html">MacdDiff</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-21994470%2FClasslikes%2F1620374451" anchor-label="SmaFast" id="-21994470%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sma-fast/index.html">SmaFast</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-21994470%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-sma-fast/index.html">SmaFast</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-329954561%2FClasslikes%2F1620374451" anchor-label="SmaSlow" id="-329954561%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sma-slow/index.html">SmaSlow</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-329954561%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-sma-slow/index.html">SmaSlow</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1728707340%2FClasslikes%2F1620374451" anchor-label="EmaFast" id="1728707340%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ema-fast/index.html">EmaFast</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1728707340%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ema-fast/index.html">EmaFast</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1420747249%2FClasslikes%2F1620374451" anchor-label="EmaSlow" id="1420747249%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ema-slow/index.html">EmaSlow</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1420747249%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ema-slow/index.html">EmaSlow</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="617608513%2FClasslikes%2F1620374451" anchor-label="VortexIndPositive" id="617608513%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vortex-ind-positive/index.html">VortexIndPositive</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="617608513%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-vortex-ind-positive/index.html">VortexIndPositive</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="864290429%2FClasslikes%2F1620374451" anchor-label="VortexIndNegative" id="864290429%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vortex-ind-negative/index.html">VortexIndNegative</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="864290429%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-vortex-ind-negative/index.html">VortexIndNegative</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2074055757%2FClasslikes%2F1620374451" anchor-label="VortexIndDiff" id="2074055757%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vortex-ind-diff/index.html">VortexIndDiff</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2074055757%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-vortex-ind-diff/index.html">VortexIndDiff</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-445603746%2FClasslikes%2F1620374451" anchor-label="Trix" id="-445603746%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-trix/index.html">Trix</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-445603746%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-trix/index.html">Trix</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1474985493%2FClasslikes%2F1620374451" anchor-label="MassIndex" id="1474985493%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mass-index/index.html">MassIndex</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1474985493%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-mass-index/index.html">MassIndex</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1893817530%2FClasslikes%2F1620374451" anchor-label="Dpo" id="1893817530%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dpo/index.html">Dpo</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1893817530%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dpo/index.html">Dpo</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1240302173%2FClasslikes%2F1620374451" anchor-label="Kst" id="-1240302173%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kst/index.html">Kst</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1240302173%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kst/index.html">Kst</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1247241003%2FClasslikes%2F1620374451" anchor-label="KstSignal" id="1247241003%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kst-signal/index.html">KstSignal</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1247241003%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kst-signal/index.html">KstSignal</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="884462472%2FClasslikes%2F1620374451" anchor-label="KstDiff" id="884462472%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kst-diff/index.html">KstDiff</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="884462472%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kst-diff/index.html">KstDiff</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="812909356%2FClasslikes%2F1620374451" anchor-label="IchimokuConv" id="812909356%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ichimoku-conv/index.html">IchimokuConv</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="812909356%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ichimoku-conv/index.html">IchimokuConv</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="753126921%2FClasslikes%2F1620374451" anchor-label="IchimokuBase" id="753126921%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ichimoku-base/index.html">IchimokuBase</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="753126921%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ichimoku-base/index.html">IchimokuBase</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="983799633%2FClasslikes%2F1620374451" anchor-label="IchimokuA" id="983799633%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ichimoku-a/index.html">IchimokuA</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="983799633%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ichimoku-a/index.html">IchimokuA</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1380936814%2FClasslikes%2F1620374451" anchor-label="IchimokuB" id="-1380936814%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ichimoku-b/index.html">IchimokuB</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1380936814%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ichimoku-b/index.html">IchimokuB</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="515885369%2FClasslikes%2F1620374451" anchor-label="Stc" id="515885369%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stc/index.html">Stc</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="515885369%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-stc/index.html">Stc</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1124129521%2FClasslikes%2F1620374451" anchor-label="IchimokuVisualA" id="1124129521%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ichimoku-visual-a/index.html">IchimokuVisualA</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1124129521%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ichimoku-visual-a/index.html">IchimokuVisualA</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1240606926%2FClasslikes%2F1620374451" anchor-label="IchimokuVisualB" id="-1240606926%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ichimoku-visual-b/index.html">IchimokuVisualB</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1240606926%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ichimoku-visual-b/index.html">IchimokuVisualB</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="196360015%2FClasslikes%2F1620374451" anchor-label="AroonUp" id="196360015%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-aroon-up/index.html">AroonUp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="196360015%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-aroon-up/index.html">AroonUp</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-847668458%2FClasslikes%2F1620374451" anchor-label="AroonDown" id="-847668458%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-aroon-down/index.html">AroonDown</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-847668458%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-aroon-down/index.html">AroonDown</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1894230787%2FClasslikes%2F1620374451" anchor-label="AroonIndicator" id="1894230787%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-aroon-indicator/index.html">AroonIndicator</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1894230787%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-aroon-indicator/index.html">AroonIndicator</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-21219617%2FClasslikes%2F1620374451" anchor-label="Rsi" id="-21219617%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-rsi/index.html">Rsi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-21219617%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-rsi/index.html">Rsi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1848367642%2FClasslikes%2F1620374451" anchor-label="StochRsi" id="-1848367642%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stoch-rsi/index.html">StochRsi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1848367642%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-stoch-rsi/index.html">StochRsi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="932121229%2FClasslikes%2F1620374451" anchor-label="StochRsiK" id="932121229%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stoch-rsi-k/index.html">StochRsiK</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="932121229%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-stoch-rsi-k/index.html">StochRsiK</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="305407174%2FClasslikes%2F1620374451" anchor-label="StochRsiD" id="305407174%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stoch-rsi-d/index.html">StochRsiD</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="305407174%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-stoch-rsi-d/index.html">StochRsiD</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-969271583%2FClasslikes%2F1620374451" anchor-label="Tsi" id="-969271583%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tsi/index.html">Tsi</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-969271583%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-tsi/index.html">Tsi</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="816829771%2FClasslikes%2F1620374451" anchor-label="Uo" id="816829771%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-uo/index.html">Uo</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="816829771%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-uo/index.html">Uo</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1558824362%2FClasslikes%2F1620374451" anchor-label="Stoch" id="1558824362%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stoch/index.html">Stoch</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1558824362%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-stoch/index.html">Stoch</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1726237170%2FClasslikes%2F1620374451" anchor-label="StochSignal" id="1726237170%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-stoch-signal/index.html">StochSignal</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1726237170%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-stoch-signal/index.html">StochSignal</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1727783372%2FClasslikes%2F1620374451" anchor-label="Wr" id="1727783372%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-wr/index.html">Wr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1727783372%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-wr/index.html">Wr</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1925388321%2FClasslikes%2F1620374451" anchor-label="Ao" id="-1925388321%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ao/index.html">Ao</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1925388321%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ao/index.html">Ao</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1843126819%2FClasslikes%2F1620374451" anchor-label="Roc" id="-1843126819%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-roc/index.html">Roc</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1843126819%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-roc/index.html">Roc</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="500473030%2FClasslikes%2F1620374451" anchor-label="Ppo" id="500473030%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ppo/index.html">Ppo</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="500473030%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ppo/index.html">Ppo</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1967152142%2FClasslikes%2F1620374451" anchor-label="PpoSignal" id="1967152142%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ppo-signal/index.html">PpoSignal</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1967152142%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ppo-signal/index.html">PpoSignal</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1524813704%2FClasslikes%2F1620374451" anchor-label="PpoHist" id="1524813704%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ppo-hist/index.html">PpoHist</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1524813704%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-ppo-hist/index.html">PpoHist</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1253841920%2FClasslikes%2F1620374451" anchor-label="Pvo" id="-1253841920%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pvo/index.html">Pvo</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1253841920%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-pvo/index.html">Pvo</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1409798088%2FClasslikes%2F1620374451" anchor-label="PvoSignal" id="1409798088%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pvo-signal/index.html">PvoSignal</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1409798088%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-pvo-signal/index.html">PvoSignal</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1903695422%2FClasslikes%2F1620374451" anchor-label="PvoHist" id="-1903695422%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pvo-hist/index.html">PvoHist</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1903695422%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-pvo-hist/index.html">PvoHist</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-188046117%2FClasslikes%2F1620374451" anchor-label="Kama" id="-188046117%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-kama/index.html">Kama</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-188046117%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-kama/index.html">Kama</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1306820545%2FClasslikes%2F1620374451" anchor-label="Dr" id="-1306820545%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dr/index.html">Dr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1306820545%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dr/index.html">Dr</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="264118785%2FClasslikes%2F1620374451" anchor-label="Dlr" id="264118785%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dlr/index.html">Dlr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="264118785%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-dlr/index.html">Dlr</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1014434720%2FClasslikes%2F1620374451" anchor-label="Cr" id="-1014434720%2FClasslikes%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-togglable="ENTRY" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-cr/index.html">Cr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1014434720%2FClasslikes%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><div class="block"><a href="-cr/index.html">Cr</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="193822123%2FProperties%2F1620374451" anchor-label="entries" id="193822123%2FProperties%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="entries.html"><span><span>entries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="193822123%2FProperties%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="entries.html">entries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.enums/-enum-entries/index.html">EnumEntries</a><span class="token operator">&lt;</span><a href="index.html">IndicatorName</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a representation of an immutable list of all enum entries, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372974862%2FProperties%2F1620374451" anchor-label="name" id="-372974862%2FProperties%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../velkonost.technical.analysis.strategy.base/-strategy-name/-fib-macd/index.html#-372974862%2FProperties%2F1620374451"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../velkonost.technical.analysis.strategy.base/-strategy-name/-fib-macd/index.html#-372974862%2FProperties%2F1620374451">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F1620374451" anchor-label="ordinal" id="-739389684%2FProperties%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../velkonost.technical.analysis.strategy.base/-strategy-name/-fib-macd/index.html#-739389684%2FProperties%2F1620374451"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../velkonost.technical.analysis.strategy.base/-strategy-name/-fib-macd/index.html#-739389684%2FProperties%2F1620374451">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-168265629%2FProperties%2F1620374451" anchor-label="title" id="-168265629%2FProperties%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title.html"><span><span>title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-168265629%2FProperties%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="title.html">title</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="167194065%2FFunctions%2F1620374451" anchor-label="valueOf" id="167194065%2FFunctions%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="167194065%2FFunctions%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">IndicatorName</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2008550557%2FFunctions%2F1620374451" anchor-label="values" id="2008550557%2FFunctions%2F1620374451" data-filterable-set=":technical-analysis:dokkaHtml/main"></a>
+          <div class="table-row" data-filterable-current=":technical-analysis:dokkaHtml/main" data-filterable-set=":technical-analysis:dokkaHtml/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2008550557%2FFunctions%2F1620374451"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":technical-analysis:dokkaHtml/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">IndicatorName</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
