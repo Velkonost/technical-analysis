@@ -18,6 +18,14 @@ group = "com.velkonost"
 version = libs.versions.technical.analysis.get()
 description = "Technical analysis popular indicators"
 
+tasks {
+    register<Jar>("dokkaJar") {
+        from(dokkaHtml)
+        dependsOn(dokkaHtml)
+        archiveClassifier.set("javadoc")
+    }
+}
+
 mavenPublishing {
     configure(
         KotlinJvm(
