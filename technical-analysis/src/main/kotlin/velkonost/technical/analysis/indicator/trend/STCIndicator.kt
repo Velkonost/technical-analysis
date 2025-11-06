@@ -73,13 +73,13 @@ class STCIndicator(
             } else {
                 BigDecimal.ZERO
             }
-        }
+        }.toList()
 
         val stochD = stochK.calculateEma(smooth1)
         val stochDMin = stochD.calculateRollingMin(cycle)
         val stochDMax = stochD.calculateRollingMax(cycle)
 
-        val stochKD = stochD.mapIndexed { index, value ->
+        val stochKD = stochD.withIndex().map { (index, value) ->
             if (stochDMax[index] != stochDMin[index]) {
                 value.subtract(stochDMin[index])
                     .divide(stochDMax[index].subtract(stochDMin[index]), 10, RoundingMode.HALF_UP)

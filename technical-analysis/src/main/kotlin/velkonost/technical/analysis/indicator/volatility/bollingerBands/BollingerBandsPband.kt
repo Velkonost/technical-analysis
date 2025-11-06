@@ -21,10 +21,11 @@ class BollingerBandsPband(
         val result = close.toList().mapIndexed { index, closeValue ->
             val hbandValue = hband[index]
             val lbandValue = lband[index]
+            val denominator = hbandValue.subtract(lbandValue)
 
-            if (hbandValue != lbandValue) {
+            if (denominator.compareTo(BigDecimal.ZERO) != 0) {
                 closeValue.subtract(lbandValue)
-                    .divide(hbandValue.subtract(lbandValue), 10, RoundingMode.HALF_UP)
+                    .divide(denominator, 10, RoundingMode.HALF_UP)
             } else {
                 BigDecimal.ZERO
             }

@@ -68,7 +68,7 @@ class UltimateOscillator(
      */
     override fun calculate(): DataColumn<BigDecimal> {
         val closeShift = close.mapIndexed { index, value ->
-            if (index == 0) BigDecimal.ZERO ?: value else close[index - 1]
+            if (index == 0) value else close[index - 1]
         }.toList()
 
         val trueRange = calculateTrueRange(high, low, close)
@@ -77,9 +77,26 @@ class UltimateOscillator(
             buyingPressure[i] = close[i].subtract(minOf(low[i], closeShift[i]))
         }
 
-        val avgS = buyingPressure.rollingSum(window1).zipDivide(trueRange.rollingSum(window1), scale)
-        val avgM = buyingPressure.rollingSum(window2).zipDivide(trueRange.rollingSum(window2), scale)
-        val avgL = buyingPressure.rollingSum(window3).zipDivide(trueRange.rollingSum(window3), scale)
+        val sumBpS = buyingPressure.rollingSum(window1)
+        val sumTrS = trueRange.rollingSum(window1)
+        val avgS = sumBpS.mapIndexed { i, v ->
+            if (i < window1 - 1 || sumTrS[i].compareTo(BigDecimal.ZERO) == 0) BigDecimal.ZERO
+            else v.divide(sumTrS[i], scale, RoundingMode.HALF_UP)
+        }
+
+        val sumBpM = buyingPressure.rollingSum(window2)
+        val sumTrM = trueRange.rollingSum(window2)
+        val avgM = sumBpM.mapIndexed { i, v ->
+            if (i < window2 - 1 || sumTrM[i].compareTo(BigDecimal.ZERO) == 0) BigDecimal.ZERO
+            else v.divide(sumTrM[i], scale, RoundingMode.HALF_UP)
+        }
+
+        val sumBpL = buyingPressure.rollingSum(window3)
+        val sumTrL = trueRange.rollingSum(window3)
+        val avgL = sumBpL.mapIndexed { i, v ->
+            if (i < window3 - 1 || sumTrL[i].compareTo(BigDecimal.ZERO) == 0) BigDecimal.ZERO
+            else v.divide(sumTrL[i], scale, RoundingMode.HALF_UP)
+        }
 
         val uo = Array(avgS.size) { i ->
             (weight1.multiply(avgS[i]) + weight2.multiply(avgM[i]) + weight3.multiply(avgL[i]))

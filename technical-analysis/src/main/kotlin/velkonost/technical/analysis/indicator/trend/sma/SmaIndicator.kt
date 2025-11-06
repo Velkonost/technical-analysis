@@ -10,12 +10,20 @@ internal interface SmaIndicator {
     fun calculateSMA(close: DataColumn<BigDecimal>, window: Int): Array<BigDecimal> {
         val closeList = close.toList()
         val smaValues = Array<BigDecimal>(close.size()) { BigDecimal.ZERO }
+        val size = close.size()
 
-        for (i in close.indices) {
-            val windowSlice = closeList.subList(maxOf(0, i - window + 1), i + 1)
-            val average = windowSlice.reduce { acc, value -> acc.add(value) }
-                .divide(BigDecimal(windowSlice.size), 10, RoundingMode.HALF_UP)
-            smaValues[i] = average
+        // Оптимизация: используем накопительную сумму для уменьшения количества операций
+        for (i in 0 until size) {
+            val startIndex = maxOf(0, i - window + 1)
+            var sum = BigDecimal.ZERO
+            val windowSize = i - startIndex + 1
+            
+            // Суммируем значения в окне
+            for (j in startIndex..i) {
+                sum = sum.add(closeList[j])
+            }
+            
+            smaValues[i] = sum.divide(BigDecimal(windowSize), 10, RoundingMode.HALF_UP)
         }
 
         return smaValues

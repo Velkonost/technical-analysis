@@ -15,13 +15,23 @@ class BollingerBandsWband(
 
     override fun calculate(): DataColumn<BigDecimal> {
         val hband = BollingerBandsHband(close, window, windowDev, fillna).calculate().toList()
-        val lband = BollingerBandsLband(close, window, windowDev, fillna).calculate()
-        val mavg = BollingerBandsMavg(close, window).calculate()
+        val lband = BollingerBandsLband(close, window, windowDev, fillna).calculate().toList()
+        val mavg = BollingerBandsMavg(close, window).calculate().toList()
 
-        val result = hband.toList().zip(lband.toList()) { h, l ->
-            h.subtract(l).divide(mavg.toList()[hband.indexOf(h)], 10, RoundingMode.HALF_UP)
-                .multiply(BigDecimal(100))
+        val result = mutableListOf<BigDecimal>()
+        for (index in hband.indices) {
+            val h = hband[index]
+            val l = lband[index]
+            val m = mavg[index]
+            
+            if (m.compareTo(BigDecimal.ZERO) != 0) {
+                val width = h.subtract(l).divide(m, 10, RoundingMode.HALF_UP)
+                    .multiply(BigDecimal(100))
+                result.add(width)
+            } else {
+                result.add(BigDecimal.ZERO)
+            }
         }
-        return DataColumn.create(name.title, result.toList())
+        return DataColumn.create(name.title, result)
     }
 }

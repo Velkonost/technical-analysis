@@ -50,16 +50,19 @@ class AccDistIndexIndicator(
         val clv = close.mapIndexed { index, closeValue ->
             val highValue = high[index]
             val lowValue = low[index]
+            val denominator = highValue.subtract(lowValue)
 
-            try {
-                ((closeValue - lowValue) - (highValue - closeValue)) / (highValue - lowValue)
-            } catch (e: Exception) {
+            // Проверка деления на ноль и обработка граничных случаев
+            if (denominator.compareTo(BigDecimal.ZERO) == 0) {
                 BigDecimal.ZERO
+            } else {
+                val numerator = closeValue.subtract(lowValue).subtract(highValue.subtract(closeValue))
+                numerator.divide(denominator, scale, java.math.RoundingMode.HALF_UP)
             }
         }
 
         val adiValues = clv.mapIndexed { index, clvValue ->
-            clvValue * volume[index]
+            clvValue.multiply(volume[index])
         }
 
         return adiValues.cumSum(fillna)
