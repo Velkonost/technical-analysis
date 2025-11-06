@@ -64,7 +64,7 @@ class DailyReturnIndicator(
         val dailyReturn = Array(closeValues.size) { BigDecimal.ZERO }
 
         for (i in 1 until closeValues.size) {
-            if (closeValues[i - 1] != BigDecimal.ZERO) {
+            if (closeValues[i - 1].compareTo(BigDecimal.ZERO) != 0) {
                 dailyReturn[i] = (closeValues[i].divide(closeValues[i - 1], scale, RoundingMode.HALF_UP)
                     .subtract(BigDecimal.ONE))
                     .multiply(BigDecimal(100))

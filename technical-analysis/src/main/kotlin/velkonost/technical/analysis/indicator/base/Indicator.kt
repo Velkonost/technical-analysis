@@ -79,11 +79,13 @@ abstract class Indicator(
     protected fun List<BigDecimal>.calculateEma(window: Int): List<BigDecimal> {
         val emaValues = Array<BigDecimal>(size) { BigDecimal.ZERO }
         val smoothing = BigDecimal(2).divide(BigDecimal(window + 1), 10, RoundingMode.HALF_UP)
+        // Кэшируем значение (1 - smoothing) для оптимизации
+        val oneMinusSmoothing = BigDecimal.ONE.subtract(smoothing)
 
         emaValues[0] = first()
         for (i in 1 until size) {
             val ema = this[i].multiply(smoothing).add(
-                emaValues[i - 1].multiply(BigDecimal.ONE.subtract(smoothing))
+                emaValues[i - 1].multiply(oneMinusSmoothing)
             ).setScale(10, RoundingMode.HALF_UP)
             emaValues[i] = ema
         }

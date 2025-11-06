@@ -68,14 +68,14 @@ class VolumeWeightedAveragePrice(
 
         val vwap = totalPV.mapIndexed { index, pvValue ->
             val volValue = totalVolume[index]
-            if (volValue != BigDecimal.ZERO) {
+            if (volValue.compareTo(BigDecimal.ZERO) != 0) {
                 pvValue.divide(volValue, 10, RoundingMode.HALF_UP)
             } else {
                 BigDecimal.ZERO
             }
         }
 
-        val result = vwap.takeIf { !fillna } ?: vwap.fillNulls(BigDecimal.ZERO)
+        val result = if (fillna) vwap.fillNulls(BigDecimal.ZERO) else vwap
         return DataColumn.create(name.title, result)
     }
 }

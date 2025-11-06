@@ -122,7 +122,7 @@ class DailyLogReturnIndicator(
 
         // Рассчитываем логарифм разницы цен
         for (i in 1 until closeValues.size) {
-            if (closeValues[i] > BigDecimal.ZERO && closeValues[i - 1] > BigDecimal.ZERO) {
+            if (closeValues[i].compareTo(BigDecimal.ZERO) > 0 && closeValues[i - 1].compareTo(BigDecimal.ZERO) > 0) {
                 val logCurrent = ln(closeValues[i].toDouble())
                 val logPrevious = ln(closeValues[i - 1].toDouble())
                 dailyLogReturn[i] = BigDecimal(logCurrent - logPrevious, MathContext(scale))
