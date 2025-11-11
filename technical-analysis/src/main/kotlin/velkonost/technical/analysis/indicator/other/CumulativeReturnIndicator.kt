@@ -70,10 +70,12 @@ class CumulativeReturnIndicator(
 
         if (closeValues.isNotEmpty()) {
             val firstClose = closeValues[0]
-            for (i in closeValues.indices) {
-                cumulativeReturn[i] = (closeValues[i].divide(firstClose, scale, RoundingMode.HALF_UP))
-                    .subtract(BigDecimal.ONE)
-                    .multiply(BigDecimal(100))
+            if (firstClose.compareTo(BigDecimal.ZERO) != 0) {
+                for (i in closeValues.indices) {
+                    cumulativeReturn[i] = (closeValues[i].divide(firstClose, scale, RoundingMode.HALF_UP))
+                        .subtract(BigDecimal.ONE)
+                        .multiply(BigDecimal(100))
+                }
             }
         }
         return DataColumn.create(name.title, cumulativeReturn.toList())

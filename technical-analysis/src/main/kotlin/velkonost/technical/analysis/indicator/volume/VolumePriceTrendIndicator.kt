@@ -50,16 +50,27 @@ class VolumePriceTrendIndicator(
      * @return DataColumn<BigDecimal> containing the VPT values
      */
     override fun calculate(): DataColumn<BigDecimal> {
-        val pctChange = Array(close.size() - 1) { BigDecimal.ZERO }
-        for (i in 1 until close.size() - 1) {
-            val prev = close[i - 1]
-            val curr = close[i]
-            val pct = (curr.subtract(prev)).divide(prev, 10, RoundingMode.HALF_UP)
-            pctChange[i] = pct
+        val size = close.size()
+        if (size < 2) {
+            return DataColumn.create(name.title, listOf(BigDecimal.ZERO))
         }
 
-        var vpt = Array(pctChange.size) { index ->
-            pctChange[index].multiply(volume[index])
+        val pctChange = Array(size) { BigDecimal.ZERO }
+        for (i in 1 until size) {
+            val prev = close[i - 1]
+            val curr = close[i]
+            if (prev.compareTo(BigDecimal.ZERO) != 0) {
+                val pct = curr.subtract(prev).divide(prev, 10, RoundingMode.HALF_UP)
+                pctChange[i] = pct
+            }
+        }
+
+        var vpt = Array(size) { index ->
+            if (index < volume.size()) {
+                pctChange[index].multiply(volume[index])
+            } else {
+                BigDecimal.ZERO
+            }
         }.cumSum()
 
         smoothingFactor?.let { vpt = vpt.movingAverage(it) }

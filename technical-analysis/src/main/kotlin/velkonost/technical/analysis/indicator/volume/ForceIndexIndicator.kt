@@ -88,7 +88,8 @@ class ForceIndexIndicator(
     private fun calculateForceIndex1(): DataColumn<BigDecimal> {
         val fi1 = Array<BigDecimal>(close.size()) { BigDecimal.ZERO }
         for (i in 1 until close.size()) {
-            fi1[i] = (close[i] - close[i - 1]) * volume[i]
+            val priceChange = close[i].subtract(close[i - 1])
+            fi1[i] = priceChange.multiply(volume[i])
         }
         return DataColumn.create(name.title, fi1.toList())
     }

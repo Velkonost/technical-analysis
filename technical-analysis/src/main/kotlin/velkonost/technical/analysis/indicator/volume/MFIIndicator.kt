@@ -74,32 +74,48 @@ class MFIIndicator(
         val positiveMF = Array<BigDecimal>(size) { BigDecimal.ZERO }
         val negativeMF = Array<BigDecimal>(size) { BigDecimal.ZERO }
 
+        // Оптимизация: используем скользящее окно вместо создания нового subList для каждой итерации
         for (i in moneyFlow.indices) {
-            val windowSlice = moneyFlow.subList(maxOf(0, i - window + 1), i + 1)
-            val positiveSum = windowSlice.filter { it >= BigDecimal.ZERO }
-                .fold(BigDecimal.ZERO) { acc, bd -> acc.add(bd).setScale(10, RoundingMode.HALF_UP) }
-            val negativeSum = windowSlice.filter { it < BigDecimal.ZERO }
-                .fold(BigDecimal.ZERO) { acc, bd -> acc.add(bd.abs()).setScale(10, RoundingMode.HALF_UP) }
-
+            val startIndex = maxOf(0, i - window + 1)
+            var positiveSum = BigDecimal.ZERO
+            var negativeSum = BigDecimal.ZERO
+            
+            // Вычисляем суммы для текущего окна
+            for (j in startIndex..i) {
+                val value = moneyFlow[j]
+                if (value >= BigDecimal.ZERO) {
+                    positiveSum = positiveSum.add(value)
+                } else {
+                    negativeSum = negativeSum.add(value.abs())
+                }
+            }
+            
             positiveMF[i] = positiveSum.setScale(10, RoundingMode.HALF_UP)
             negativeMF[i] = negativeSum.setScale(10, RoundingMode.HALF_UP)
         }
 
-        val mfiValues = positiveMF.zip(negativeMF) { pos, neg ->
-            if (neg.compareTo(BigDecimal.ZERO) == 0) BigDecimal(100)
-            else {
+        val mfiValues = ArrayList<BigDecimal>(size)
+        for (i in 0 until size) {
+            val windowSize = minOf(window, i + 1)
+            if (windowSize < window) {
+                mfiValues.add(BigDecimal(50))
+                continue
+            }
+
+            val pos = positiveMF[i]
+            val neg = negativeMF[i]
+            val mfi = if (neg.compareTo(BigDecimal.ZERO) == 0) {
+                BigDecimal(100)
+            } else {
                 val moneyRatio = pos.divide(neg, 10, RoundingMode.HALF_UP)
                 BigDecimal(100).subtract(
-                    BigDecimal(100).divide(
-                        BigDecimal.ONE.add(moneyRatio),
-                        10,
-                        RoundingMode.HALF_UP
-                    )
+                    BigDecimal(100).divide(BigDecimal.ONE.add(moneyRatio), 10, RoundingMode.HALF_UP)
                 )
             }
+            mfiValues.add(mfi)
         }
 
-        return DataColumn.create(name.title, mfiValues.toList())
+        return DataColumn.create(name.title, mfiValues)
     }
 
 }

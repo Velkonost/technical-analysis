@@ -100,7 +100,7 @@ class SmaEaseOfMovementIndicator(
             if (index == 0) BigDecimal.ZERO else {
                 val distanceMoved = highDiff[index].add(lowDiff[index])
                 val volumeValue = volume[index].multiply(BigDecimal(2))
-                if (volumeValue == BigDecimal.ZERO) {
+                if (volumeValue.compareTo(BigDecimal.ZERO) == 0) {
                     BigDecimal.ZERO
                 } else {
                     distanceMoved.multiply(priceRange[index])

@@ -97,7 +97,7 @@ class EaseOfMovementIndicator(
             if (index == 0) BigDecimal.ZERO else {
                 val distanceMoved = highDiff[index].add(lowDiff[index])
                 val volumeValue = volume[index].multiply(BigDecimal(2))
-                if (volumeValue == BigDecimal.ZERO) {
+                if (volumeValue.compareTo(BigDecimal.ZERO) == 0) {
                     BigDecimal.ZERO
                 } else {
                     distanceMoved.multiply(priceRange[index])
@@ -107,7 +107,7 @@ class EaseOfMovementIndicator(
             }
         }
 
-        val result = emv.takeIf { !fillna } ?: emv.fillNulls(BigDecimal.ZERO)
+        val result = if (fillna) emv.fillNulls(BigDecimal.ZERO) else emv
         return DataColumn.create(name.title, result)
     }
 }

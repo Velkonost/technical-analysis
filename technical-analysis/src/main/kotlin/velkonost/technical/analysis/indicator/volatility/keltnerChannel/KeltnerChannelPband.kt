@@ -25,17 +25,21 @@ class KeltnerChannelPband(
         val tpHigh = KeltnerChannelHband(high, low, close, window, windowAtr, fillna, originalVersion).calculate()
         val tpLow = KeltnerChannelLband(high, low, close, window, windowAtr, fillna, originalVersion).calculate()
 
-        val result = close.mapIndexed { index, closeValue ->
+        val result = mutableListOf<BigDecimal>()
+        val size = close.size()
+        for (index in 0 until size) {
+            val closeValue = close[index]
             val denominator = tpHigh[index].subtract(tpLow[index])
-            if (denominator.compareTo(BigDecimal.ZERO) == 0) {
+            val value = if (denominator.compareTo(BigDecimal.ZERO) == 0) {
                 BigDecimal.ZERO
             } else {
                 closeValue.subtract(tpLow[index])
                     .divide(denominator, 10, RoundingMode.HALF_UP)
             }
+            result.add(value)
         }
 
-        return DataColumn.create(name.title, result.toList())
+        return DataColumn.create(name.title, result)
     }
 
 
